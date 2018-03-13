@@ -1,0 +1,21 @@
+{
+  "name": "projectgenerator",
+  "version": "1.0.0",
+  "description": "Project generator",
+  "main": "projectGenerator.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "generate": "./projectGenerator.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.3.2",
+    "clear": "^0.1.0",
+    "figlet": "^1.2.0",
+    "inquirer": "^3.2.2",
+    "node-cmd": "^3.0.0"
+  }
+}

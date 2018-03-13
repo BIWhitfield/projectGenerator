@@ -1,0 +1,71 @@
+{
+  "name": "reactProject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "dev":
+      "environment=development ./node_modules/.bin/webpack-dev-server --mode development --open --config ./webpack/webpack.dev.js",
+    "build": "environment=production ./node_modules/.bin/webpack --mode production --config ./webpack/webpack.prod.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "webpack": "^4.1.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.4.1",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-minify": "^0.3.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "eslint": "^4.18.2",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.7.0",
+    "jest": "^22.4.2",
+    "jest-runner-eslint": "^0.4.0",
+    "less": "^3.0.1",
+    "less-loader": "^4.1.0",
+    "react-test-renderer": "^16.2.0",
+    "style-loader": "^0.20.3",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "babel": {
+    "presets": ["es2015", "env", "react", "stage-0"],
+    "env": {
+      "production": {
+        "presets": ["minify"]
+      }
+    },
+    "plugins": ["transform-object-rest-spread"]
+  },
+  "jest": {
+    "projects": [
+      {
+        "displayName": "Test"
+      },
+      {
+        "runner": "jest-runner-eslint",
+        "displayName": "Lint",
+        "testMatch": ["<rootDir>/src/**/*.js"]
+      }
+    ]
+  }
+}
